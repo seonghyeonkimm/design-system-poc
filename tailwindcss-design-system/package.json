@@ -2,12 +2,11 @@
   "name": "tailwind-ds",
   "license": "MIT",
   "scripts": {
-    "build:style": "postcss ./src/styles/index.css -o dist/style.css --config ./src/styles/postcss.config.js",
-    "build:style:watch": "yarn build:style -w",
-    "build:style:prod": "NODE_ENV=production yarn build:style -w",
-    "storybook": "npm-run-all --parallel build:style:watch start-storybook",
+    "build:style": "postcss ./src/styles/index.css --config ./src/styles/postcss.config.js -o dist/index.css",
+    "build:style:prod": "NODE_ENV=production yarn build:style",
+    "storybook": "npm-run-all --parallel 'build:style -w' start-storybook",
     "start-storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "yarn build:style:prod && build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
