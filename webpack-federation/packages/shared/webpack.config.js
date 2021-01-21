@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack").container
   .ModuleFederationPlugin;
 const path = require("path");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: "./src/index",
@@ -26,7 +28,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          "style-loader",
+          isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           { loader: "css-loader", options: { importLoaders: 1 } },
           "postcss-loader",
         ],
@@ -35,6 +37,7 @@ module.exports = {
     ],
   },
   plugins: [
+    ...(isProduction ? [new MiniCssExtractPlugin()] : []),
     new ModuleFederationPlugin({
       name: "shared",
       filename: "remoteEntry.js",
