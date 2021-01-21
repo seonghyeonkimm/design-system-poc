@@ -1,0 +1,1 @@
+# Webpack Federation Example

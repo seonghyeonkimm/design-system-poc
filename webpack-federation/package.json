@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "lerna run --scope @webpack-federation/* --parallel start",
+    "build": "lerna run --scope @webpack-federation/* build",
+    "serve": "lerna run --scope @webpack-federation/* --parallel serve",
+    "clean": "lerna run --scope @webpack-federation/* --parallel clean"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "name": "webpack-federation",
+  "workspaces": ["packages/*"]
+}
