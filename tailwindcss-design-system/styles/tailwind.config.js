@@ -1,7 +1,47 @@
 module.exports = {
   purge: ['./components/**/*.tsx'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      primary: {
+        elevate: 'var(--colors-primary-elevate)',
+        DEFAULT: 'var(--colors-primary)',
+        down: 'var(--colors-primary-down)',
+      },
+      secondary: {
+        elevate: 'var(--colors-secondary-elevate)',
+        DEFAULT: 'var(--colors-secondary)',
+        down: 'var(--colors-secondary-down)',
+      },
+      tertiary: 'var(--colors-tertiary)',
+      gray: {
+        10: 'var(--colors-gray-10)',
+        9: 'var(--colors-gray-9)',
+        8: 'var(--colors-gray-8)',
+        7: 'var(--colors-gray-7)',
+        6: 'var(--colors-gray-6)',
+        5: 'var(--colors-gray-5)',
+        4: 'var(--colors-gray-4)',
+        3: 'var(--colors-gray-3)',
+        2: 'var(--colors-gray-2)',
+        1: 'var(--colors-gray-1)',
+        0: 'var(--colors-gray-0)',
+      },
+      turquoise: 'var(--colors-turquoise)',
+      mint: 'var(--colors-mint)',
+      orange: 'var(--colors-orange)',
+      green: 'var(--colors-green)',
+      red: 'var(--colors-red)',
+      'electric-blue': 'var(--colors-electric-blue)',
+      'baby-blue': 'var(--colors-baby-blue)',
+      lemon: 'var(--colors-lemon)',
+      pink: 'var(--colors-pink)',
+      'light-mint': 'var(--colors-light-mint)',
+      'light-blue': 'var(--colors-light-blue)',
+      peach: 'var(--colors-peach)',
+    },
     extend: {},
   },
   variants: {
@@ -9,3 +49,4 @@ module.exports = {
   },
   plugins: [],
 }
+

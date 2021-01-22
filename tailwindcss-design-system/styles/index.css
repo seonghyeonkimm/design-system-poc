@@ -1,3 +1,69 @@
+html {
+  --colors-primary-elevate: #0F4980;
+  --colors-primary: #092C4C;
+  --colors-primary-down: #132F4A;
+  --colors-secondary-elevate: #11d4ce;
+  --colors-secondary: #00bdbd;
+  --colors-secondary-down: #00a3a3;
+  --colors-tertiary: #525ff6;
+  --colors-gray-10: #000000;
+  --colors-gray-9: #1d1d1d;
+  --colors-gray-8: #282828;
+  --colors-gray-7: #333333;
+  --colors-gray-6: #4f4f4f;
+  --colors-gray-5: #828282;
+  --colors-gray-4: #bdbdbd;
+  --colors-gray-3: #e0e0e0;
+  --colors-gray-2: #efefef;
+  --colors-gray-1: #f7f7f7;
+  --colors-gray-0: #ffffff;
+  --colors-turquoise: #11d4ce;
+  --colors-mint: #92efda;
+  --colors-orange: #ff8717;
+  --colors-green: #9fef92;
+  --colors-red: #f15555;
+  --colors-electric-blue: #92eaef;
+  --colors-baby-blue: #b8d4ff;
+  --colors-lemon: #f4f691;
+  --colors-pink: #ffb8c9;
+  --colors-light-mint: #d9f5ed;
+  --colors-light-blue: #d9edff;
+  --colors-peach: #fbe5d9;
+}
+
+html.dark {
+  --colors-primary-elevate: #EDF5FD;
+  --colors-primary: #DBEBFB;
+  --colors-primary-down: #A3CCF5;
+  --colors-secondary-elevate: #0fbdb7;
+  --colors-secondary: #00a3a3;
+  --colors-secondary-down: #007a7a;
+  --colors-tertiary: #ecedfe;
+  --colors-gray-10: #ffffff;
+  --colors-gray-9: #f7f7f7;
+  --colors-gray-8: #efefef;
+  --colors-gray-7: #e0e0e0;
+  --colors-gray-6: #bdbdbd;
+  --colors-gray-5: #828282;
+  --colors-gray-4: #4f4f4f;
+  --colors-gray-3: #333333;
+  --colors-gray-2: #282828;
+  --colors-gray-1: #1d1d1d;
+  --colors-gray-0: #000000;
+  --colors-turquoise: #11d4ce;
+  --colors-mint: #a6f2e0;
+  --colors-orange: #ffa047;
+  --colors-green: #b0f2a6;
+  --colors-red: #f36868;
+  --colors-electric-blue: #a6eef2;
+  --colors-baby-blue: #d6e7ff;
+  --colors-lemon: #ffd6e0;
+  --colors-pink: #f8f9b4;
+  --colors-light-mint: #d9f5ed;
+  --colors-light-blue: #d9edff;
+  --colors-peach: #fbe5d9;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
