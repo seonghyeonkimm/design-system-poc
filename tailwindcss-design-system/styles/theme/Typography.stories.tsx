@@ -9,7 +9,7 @@ export default {
 
 export const Typography = () => {
   return (
-    <div className="mt-8">
+    <div>
       <div className="flex">
         <div className="flex-auto">
           <h1 className="font-bold text-h1 text-gray-10">Headings</h1>

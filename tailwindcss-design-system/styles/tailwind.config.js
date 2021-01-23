@@ -41,6 +41,28 @@ module.exports = {
       'light-mint': 'var(--colors-light-mint)',
       'light-blue': 'var(--colors-light-blue)',
       peach: 'var(--colors-peach)',
+      background: {
+        elevate: 'var(--colors-gray-1)',
+        DEFAULT: 'var(--colors-gray-1)',
+        down: 'var(--colors-gray-1)',
+      },
+      divider: {
+        DEFAULT: 'var(--colors-gray-2)',
+        elevate: 'var(--colors-gray-3)'
+      },
+      text: {
+        primary: 'var(--colors-gray-9)',
+        secondary: 'var(--colors-gray-5)',
+        tertiary: 'var(--colors-gray-4)',
+      },
+      system: {
+        success: 'var(--colors-secondary)',
+        'success-elevate': 'var(--colors-secondary-elevate)',
+        'success-down': 'var(--colors-secondary-down)',
+        error: 'var(--colors-red)',
+        'error-elevate': '#F47B7B',
+        'error-down': '#E85050',
+      },
     },
     spacing: {
       '1': '8px',
