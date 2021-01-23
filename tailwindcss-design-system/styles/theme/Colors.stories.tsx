@@ -71,8 +71,8 @@ export const Colors = () => {
 
 const ColorSection: React.FC<{ title: string; colors: string[] }> = ({ title, colors }) => {
   return (
-    <div className="pb-4">
-      <h1 className="text-lg font-bold text-gray-10 dark:text-dark-gray-10">
+    <div className="pb-2">
+      <h1 className="text-lg font-bold text-gray-10">
         {title}
       </h1>
       <div className="grid grid-cols-5 gap-4">
@@ -92,8 +92,8 @@ const ColorSection: React.FC<{ title: string; colors: string[] }> = ({ title, co
 const ColorBox: React.FC<{ name: string; className?: string }> = ({ name, className }) => {
   return (
     <div>
-      <p className="mb-2 text-gray-10 dark:text-dark-gray-10">{name}</p>
-      <div className={[className, 'h-40 rounded-md shadow-xl'].join(' ')} />
+      <p className="mb-2 text-gray-10">{name}</p>
+      <div className={[className, 'h-10 rounded-md shadow-xl'].join(' ')} />
     </div>
   )
 }

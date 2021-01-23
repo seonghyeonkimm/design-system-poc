@@ -42,6 +42,18 @@ module.exports = {
       'light-blue': 'var(--colors-light-blue)',
       peach: 'var(--colors-peach)',
     },
+    spacing: {
+      '1': '8px',
+      '2': '16px',
+      '3': '24px',
+      '4': '32px',
+      '5': '40px',
+      '6': '56px',
+      '7': '72px',
+      '8': '80px',
+      '9': '96px',
+      '10': '120px',
+    },
     extend: {},
   },
   variants: {

@@ -38,7 +38,7 @@ const ThemeToggler = () => {
   return (
     <button
       onClick={() => toggleTheme()}
-      className="bg-primary dark:bg-dark-primary text-gray-0 dark:text-dark-gray-0 p-3 rounded-full focus:outline-none"
+      className="bg-primary text-gray-0 px-2 py-1 rounded-full focus:outline-none"
     >
       {nextTheme} 테마로 변경하기
     </button>
