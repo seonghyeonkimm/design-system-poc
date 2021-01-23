@@ -6,7 +6,6 @@ on:
 
 jobs:
   deploy-storybook:
-    name: Build Application
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,4 +26,4 @@ jobs:
       with: 
         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         token: ${{ secrets.GITHUB_TOKEN }}
-        storybookBuildDir: storybook-static
+        storybookBuildDir: ./tailwindcss-design-system/storybook-static
