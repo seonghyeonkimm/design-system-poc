@@ -65,6 +65,40 @@ export const Colors = () => {
           'bg-peach',
         ]}
       />
+      <ColorSection
+        title="Background Color"
+        colors={[
+          'bg-background',
+          'bg-background-elevate',
+          'bg-background-down',
+        ]}
+      />
+      <ColorSection
+        title="Divider Color"
+        colors={[
+          'bg-divider',
+          'bg-divider-elevate',
+        ]}
+      />
+      <ColorSection
+        title="Text Color"
+        colors={[
+          'bg-text-primary',
+          'bg-text-secondary',
+          'bg-text-tertiary',
+        ]}
+      />
+      <ColorSection
+        title="System Color"
+        colors={[
+          'bg-system-success',
+          'bg-system-success-elevate',
+          'bg-system-success-down',
+          'bg-system-error',
+          'bg-system-error-elevate',
+          'bg-system-error-down',
+        ]}
+      />
     </div>
   )
 };
