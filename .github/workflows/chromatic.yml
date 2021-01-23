@@ -1,0 +1,34 @@
+name: 'chromatic'
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-storybook:
+    name: Build Application
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+    - name: Checkout branch
+      uses: actions/checkout@v2
+      with:
+        ref: master
+
+    - name: Setup node
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - run: cd tailwindcss-design-system
+    - name: Install Dependencies
+      run: |
+        yarn install
+    - run: yarn build-storybook
+    - uses: chromaui/action@v1
+      with: 
+        projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        storybookBuildDir: storybook-static
