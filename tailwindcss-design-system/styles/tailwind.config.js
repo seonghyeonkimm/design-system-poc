@@ -1,5 +1,6 @@
 module.exports = {
-  purge: ['./components/**/*.tsx'],
+  // TODO: need to purge later
+  purge: false,
   darkMode: 'class',
   theme: {
     colors: {
