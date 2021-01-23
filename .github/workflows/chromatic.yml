@@ -19,11 +19,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install Dependencies
-      run: cd tailwindcss-design-system && yarn install && yarn build-storybook
-
-    - uses: chromaui/action@v1
-      with: 
-        projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        token: ${{ secrets.GITHUB_TOKEN }}
-        storybookBuildDir: ./tailwindcss-design-system/storybook-static
+    - name: Install Dependencies and deploy storybook
+      run: cd tailwindcss-design-system && yarn install && npx chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
