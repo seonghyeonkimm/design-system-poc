@@ -22,11 +22,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: cd tailwindcss-design-system && ls
-    - name: Install Dependencies
-      run: |
-        yarn install
-    - run: yarn build-storybook
+    - run: cd tailwindcss-design-system && yarn install && yarn build-storybook
     - uses: chromaui/action@v1
       with: 
         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
