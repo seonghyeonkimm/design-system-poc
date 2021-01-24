@@ -1,6 +1,9 @@
 module.exports = {
-  // TODO: need to purge later
-  purge: false,
+  purge: [
+    './.storybook/**/*.{js,html,ts,tsx}',
+    './styles/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+  ],
   darkMode: 'class',
   theme: {
     colors: {
