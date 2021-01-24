@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 export type ButtonProps = {
-  color?: 'primary' | 'secondary' | 'error';
-  size?: 'large' | 'medium' | 'small';
+  color?: "primary" | "secondary" | "error";
+  size?: "large" | "medium" | "small";
   ghost?: boolean;
   disabled?: boolean;
   className?: string;
-} & JSX.IntrinsicElements['button'];
+} & JSX.IntrinsicElements["button"];
 const Button: React.FC<ButtonProps> = ({
   color = 'primary',
   size = 'medium',
