@@ -1,0 +1,128 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Docs/Theme/Colors" />
+
+export const ColorBox = ({ name, className }) => {
+  return (
+    <div>
+      <p className="mb-2 text-gray-10">{name}</p>
+      <div className={[className, 'h-10 rounded-md shadow-xl'].join(' ')} />
+    </div>
+  )
+}
+
+export const ColorSection = ({ title, colors }) => {
+  return (
+    <div className="pb-2">
+      <h1 className="text-lg font-bold text-gray-10">
+        {title}
+      </h1>
+      <div className="grid grid-cols-5 gap-4">
+        {colors.map((color) => {
+          return (
+            <ColorBox
+              key={color}
+              name={color.replace('bg-', '')}
+              className={color}
+            />
+          )
+        })} </div>
+    </div>
+  );
+}
+
+# Color Palette
+---
+
+<div>
+  <ColorSection
+    title="Primary Color"
+    colors={[
+      'bg-primary',
+      'bg-primary-elevate',
+      'bg-primary-down',
+    ]}
+  />
+  <ColorSection
+    title="Secondary Color"
+    colors={[
+      'bg-secondary',
+      'bg-secondary-elevate',
+      'bg-secondary-down',
+    ]}
+  />
+  <ColorSection
+    title="Tertiary"
+    colors={[
+      'bg-tertiary',
+    ]}
+  />
+  <ColorSection
+    title="Gray Color"
+    colors={[
+      'bg-gray-10',
+      'bg-gray-9',
+      'bg-gray-8',
+      'bg-gray-7',
+      'bg-gray-6',
+      'bg-gray-5',
+      'bg-gray-4',
+      'bg-gray-3',
+      'bg-gray-2',
+      'bg-gray-1',
+      'bg-gray-0',
+    ]}
+  />
+  <ColorSection
+    title="Sub Color"
+    colors={[
+      'bg-turquoise',
+      'bg-mint',
+      'bg-orange',
+      'bg-green',
+      'bg-red',
+      'bg-electric-blue',
+      'bg-baby-blue',
+      'bg-lemon',
+      'bg-pink',
+      'bg-light-mint',
+      'bg-light-blue',
+      'bg-peach',
+    ]}
+  />
+  <ColorSection
+    title="Background Color"
+    colors={[
+      'bg-background',
+      'bg-background-elevate',
+      'bg-background-down',
+    ]}
+  />
+  <ColorSection
+    title="Divider Color"
+    colors={[
+      'bg-divider',
+      'bg-divider-elevate',
+    ]}
+  />
+  <ColorSection
+    title="Text Color"
+    colors={[
+      'bg-text-primary',
+      'bg-text-secondary',
+      'bg-text-tertiary',
+    ]}
+  />
+  <ColorSection
+    title="System Color"
+    colors={[
+      'bg-system-success',
+      'bg-system-success-elevate',
+      'bg-system-success-down',
+      'bg-system-error',
+      'bg-system-error-elevate',
+      'bg-system-error-down',
+    ]}
+  />
+</div>
+
