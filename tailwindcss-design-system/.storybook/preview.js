@@ -9,7 +9,7 @@ export const parameters = {
 
 const StoryContainer = ({ children }) => {
   return (
-    <div className="relative pt-2 px-2 bg-gray-0 min-w-max min-h-screen">
+    <div className="relative pt-2 px-2 bg-gray-0 min-w-max">
       <div className="absolute top-2 right-2">
         <ThemeToggler />
       </div>
