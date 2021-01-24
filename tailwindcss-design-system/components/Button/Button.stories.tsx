@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta } from "@storybook/react/types-6-0";
 
-import Button from "./Button";
+import Button, { ButtonProps } from "./Button";
 
 export default {
   title: "Components/Button",
@@ -13,7 +13,7 @@ export default {
   },
 } as Meta;
 
-export const Default = (args) => {
+export const Default = (args: ButtonProps) => {
   return (
     <div className="mt-6 w-3/12">
       <Button {...args}>Button</Button>
