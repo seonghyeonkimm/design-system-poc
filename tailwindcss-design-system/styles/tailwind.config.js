@@ -1,7 +1,7 @@
 module.exports = {
   purge: [
-    './.storybook/**/*.{js,html,ts,tsx}',
-    './styles/**/*.{ts,tsx}',
+    './.storybook/**/*.{js,tsx}',
+    './docs/**/*.mdx',
     './components/**/*.{ts,tsx}',
   ],
   darkMode: 'class',
