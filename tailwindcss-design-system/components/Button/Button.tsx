@@ -1,16 +1,30 @@
 import * as React from 'react';
 
 export type ButtonProps = {
-  /** Description of prop "foo". */
+  /**
+   * button text and background color variant
+   */
   color?: "primary" | "secondary" | "error";
+  /**
+   * button size
+   */
   size?: "large" | "medium" | "small";
+  /**
+   * whether to use button as ghost or not
+   */
   ghost?: boolean;
+  /**
+   * button disabled
+   */
   disabled?: boolean;
+  /**
+   * more className to be added
+   */
   className?: string;
 } & JSX.IntrinsicElements["button"];
 
 /**
- * General component description in JSDoc format. Markdown is *supported*.
+ * Button Component
  */
 const Button: React.FC<ButtonProps> = ({
   color = 'primary',
@@ -29,7 +43,6 @@ const Button: React.FC<ButtonProps> = ({
     className,
   });
 
-  /* ... */
   return (
     <button {...props} disabled={disabled} className={btnClassName}>
       {children}

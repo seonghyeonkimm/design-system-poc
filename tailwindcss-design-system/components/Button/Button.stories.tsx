@@ -6,17 +6,12 @@ import Button, { ButtonProps } from "./Button";
 export default {
   title: "Components/Button",
   component: Button,
-  argTypes: {
-    className: {
-      defaultValue: 'w-full',
-    },
-  },
 } as Meta;
 
-export const Default = (args: ButtonProps) => {
-  return (
-    <div className="mt-6 w-3/12">
-      <Button {...args}>Button</Button>
-    </div>
-  )
+const Template = (args: ButtonProps) => <Button {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Button',
+  className: 'w-3/12',
 };

@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   stories: [
     '../docs/**/*.stories.mdx',
+    '../components/**/*.stories.tsx',
   ],
   addons: [
     "@storybook/addon-links",
