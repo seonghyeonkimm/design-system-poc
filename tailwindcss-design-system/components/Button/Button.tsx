@@ -1,12 +1,17 @@
 import * as React from 'react';
 
 export type ButtonProps = {
+  /** Description of prop "foo". */
   color?: "primary" | "secondary" | "error";
   size?: "large" | "medium" | "small";
   ghost?: boolean;
   disabled?: boolean;
   className?: string;
 } & JSX.IntrinsicElements["button"];
+
+/**
+ * General component description in JSDoc format. Markdown is *supported*.
+ */
 const Button: React.FC<ButtonProps> = ({
   color = 'primary',
   size = 'medium',
@@ -24,12 +29,9 @@ const Button: React.FC<ButtonProps> = ({
     className,
   });
 
+  /* ... */
   return (
-    <button
-      {...props}
-      disabled={disabled}
-      className={btnClassName}
-    >
+    <button {...props} disabled={disabled} className={btnClassName}>
       {children}
     </button>
   );
